@@ -1,7 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * _main -prints _putchar
+ *main -prints _putchar
  * followed by a new linet
  *
  * Return: On success 0
