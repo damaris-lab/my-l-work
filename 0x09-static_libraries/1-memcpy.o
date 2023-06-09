@@ -1,0 +1,21 @@
+#include "main.h"
+/**
+*-memcpy function that copies a string to another
+*@dest :inputs the copied string
+*@src :inputs copied string
+*@n : number in bytes
+*
+*/
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	int r = 0;
+	int i = n;
+
+	for (; r < i; r++)
+	{
+		dest[r] = src[r];
+		n--;
+	}
+	return (dest);
+}
+
