@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * _strlen_recursion returns- lengh of  string
+ * _strlen_recursion - returns lengh of  string
  * @s:string to be measured
- * Return lenth of a string
+ * Return:alwasy 0 (success)
  */
 int _strlen_recursion(char *s)
 {
-                          	if (*s == '\0')
+	if (*s == '\0')
 	{
 		return (0);
 	}
