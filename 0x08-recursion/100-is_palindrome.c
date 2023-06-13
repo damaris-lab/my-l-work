@@ -1,15 +1,11 @@
 #include "main.h"
-
-int check_pal(char *s, int i, int len);
-int _strlen_recursion(char *s);
-
 /**
- * is_palindrome - checks if a string is a palindrome
+ * is_palindrome - checks lentth of a string
  * @s: string to reverse
  *
  * Return: 1 if it is, 0 it's not
  */
-int _strlen_recursion(char *s)
+int is_palindrome(char *s);
 {
 	if (*s == '\0')
 		return (0);
