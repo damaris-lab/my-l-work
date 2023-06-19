@@ -1,1 +1,3 @@
-my first
+0x0E. C - Structures, typedef
+
+

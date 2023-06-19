@@ -1,21 +1,26 @@
-include "main.h"
+#include "main.h"
 /**
- * string_toupper - change all lowercase to uppercase
- * @n: pointer
  *
- * Return: n
+ *
  */
-char *string_toupper(char *n)
+char *_strcat(char *dest, char *src);
+int = 0
 {
-	int i;
-
-	i = 0;
-	while (n[i] != '\0')
+	i=o
+	while (dest[1]! = '/0')
 	{
-		if (n[i] >= 'a' && n[i] <= 'z')
-			n[i] = n[i] - 32;
-		i++;
+	i++
 	}
-	return (n);
-}
+	j=o
+	while (src[j]! = '/0'_)
+	{
+		dest[i] = src[i]
+                j++;
+                i++;
+	}
+	
+	return dest;
+}	
+
+ 
 
