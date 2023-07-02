@@ -1,38 +1,44 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - concantenate two strings
- * @s1: pointer to string to concantenate to
- * @s2: pointer to string to be concantenated to s1
- *
- * Return: pointer to s1
- *  NULL for failure
- */
+ * *str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to new space in memory or null
+ **/
 char *str_concat(char *s1, char *s2)
 {
-	char *str;
-	char *len;
-	char *dest;
-	int count;
+	char *strDup;
 	int i;
 	int j;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-	for (len = s2, count = 0; *len; count++, len++)
-		;
-	for (dest = s1; *dest; count++, dest++)
-		;
-	str = malloc(sizeof(char) * count + 1);
-	if (str != NULL)
+	if (s1 == NULL)
 	{
-		for (i = 0; s1[i]; i++)
-			str[i] = s1[i];
-		for (j = 0; s2[j]; j++, i++)
-			str[i] = s2[j];
-		str[i] = '\0';
-		return (str);
+		s1 = "";
 	}
-	else
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	i = j = 0;
+	while (s1[i] != '\0')
+		i++;
+	while (s2[j] != '\0')
+		j++;
+	strDup = malloc(sizeof(char) * (i + j + 1));
+	if (strDup == NULL)
 		return (NULL);
+	i = j = 0;
+	while (s1[i] != '\0')
+	{
+		strDup[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != '\0')
+	{
+		strDup[i] = s2[j];
+		i++, j++;
+	}
+	strDup[i] = '\0';
+	return (strDup);
 }
